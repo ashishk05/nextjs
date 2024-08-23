@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+//import "./globals.css";
+import "../public/css/animate/animate.min.css";
+import "../public/css/owlcarousel/assets/owl.carousel.min.css";
+import "../public/css/bootstrap.min.css";
+import "../public/css/style.css";
+import Footer  from "./component/footer";
+import Header  from "./component/header";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +23,63 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com"
+        />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@200;300;400;500;600&display=swap"
+        />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+        />
+        <link
+          rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        />
+        <script
+          src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+          async
+        ></script>
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+          async
+        ></script>
+        <script
+          src="/js/wow/wow.min.js"
+          async
+        ></script>
+        <script
+          src="/js/easing/easing.min.js"
+          async
+        ></script>
+        <script
+          src="/js/waypoints/waypoints.min.js"
+          async
+        ></script>
+        <script
+          src="/js/counterup/counterup.min.js"
+          async
+        ></script>
+        <script
+          src="/js/owlcarousel/owl.carousel.min.js"
+          async
+        ></script>
+        <script
+          src="/js/main.js"
+          async
+        ></script>
+      </head>
+      <body className={inter.className}>
+
+      {/* <Header></Header>   */}
+      {children}
+      <Footer></Footer>
+      </body>
+      
     </html>
   );
 }
